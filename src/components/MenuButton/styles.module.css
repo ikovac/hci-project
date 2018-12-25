@@ -1,0 +1,41 @@
+.Button {
+  --height: var(--header-height, 40px);
+
+  height: var(--height);
+  position: fixed;
+  right: 0px;
+  top: calc(var(--height) / 2);
+  transform: translateY(-50%);
+
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid var(--color-grey, #000);
+  display: none;
+
+  padding: 0 10px;
+  overflow-y: hidden;
+  transition: all 0.25s linear;
+
+  z-index: var(--z-index-menu, 1000);
+}
+
+.Content {
+  font-size: 15px;
+  font-weight: 400;
+  transition: all 0.25s linear;
+}
+
+.Content.open {
+  color: #fff;
+}
+
+.Button.open {
+  background: var(--color-gold, #000);
+  border: 1px solid var(--color-gold, #000);
+}
+
+@media only screen and (max-width: 450px) {
+  .Button {
+    display: block;
+  }
+}
