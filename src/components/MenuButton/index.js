@@ -7,7 +7,7 @@ const MenuButton = ({ status, onClick, className }) => (
     className={cn(styles.Button, styles[status], className)}
     onClick={onClick}
   >
-    <span className={cn(styles.Content, styles[status])}>MENU</span>
+    <span className={cn(styles.Content, styles[status])}><i className="fas fa-bars"></i></span>
   </button>
 );
 
