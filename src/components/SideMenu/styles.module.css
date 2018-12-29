@@ -1,13 +1,13 @@
 .Menu {
   padding: 1rem;
   position: fixed;
-  right: 0px;
-  top: var(--header-height, 40px);
+  left: 0px;
+  top: 50px;
   height: 100%;
   width: 200px;
 
-  background-color: #fff;
-  border-left: 5px solid var(--color-gold, #000);
+  background-color: var(--main-color);
+  /* border-right: 5px solid var(--color-gold, #000); */
 
   transition: transform 0.5s ease;
   z-index: var(--z-index-menu, 1000);
@@ -21,24 +21,27 @@
 }
 
 .Menu.closed {
-  transform: translateX(100%);
+  transform: translateX(-100%);
 }
 
 .NavLink {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 10px;
   border-left: 3px solid transparent;
-  border-top: none;
-  border-bottom: none !important;
-  margin-bottom: 2px;
+  margin-bottom: 10px;
 }
 
 .NavLink_active,
 .NavLink:hover {
-  color: var(--color-gold, orange);
-  border-left: 3px solid var(--color-gold, orange);
+  color: white;
+  border-left: 3px solid white;
 }
 
 /* You can use a CSS preprocessor to store breakpoint values in variables. */
-@media only screen and (min-width: 450px) {
+@media only screen and (min-width: 850px) {
   .Menu {
     display: none;
   }

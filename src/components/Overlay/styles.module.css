@@ -2,7 +2,7 @@
   position: fixed;
   z-index: var(--z-index-overlay, 999);
   left: 0;
-  top: 0;
+  top: 50;
   width: 0;
   height: 0;
   opacity: 0;

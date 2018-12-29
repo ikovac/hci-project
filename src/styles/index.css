@@ -1,3 +1,11 @@
+:root {
+  --mobile: 450px;
+  --tablet-upper: 850px;
+  --desktop-lower: 851px;
+  --main-color: #2FA5FF;
+  --nav-hover: #4DB2FF;
+}
+
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;

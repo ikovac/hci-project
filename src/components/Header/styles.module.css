@@ -6,20 +6,29 @@
 }
 .LogoWrapper.Mobile {
     display: block;
+    margin-left: 10px;
+}
+.LogoWrapper.Mobile a {
+    display: flex;
+    align-items: center;
+    max-height: 50px;
 }
 .LogoWrapper img {
     width: 100%;
-    max-width: 200px;
+    max-width: 120px;
     height: auto;
     cursor: pointer;
 }
 
 .NavWrapper {
-    background-color: #2FA5FF;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
 }
 .Nav {
     max-width: 1000px;
     margin: auto;
+    display: none;
 }
 .NavLink {
     display: inline-block;
@@ -30,10 +39,10 @@
     margin-right: 10px;   
 }
 .NavLink:hover {
-    background-color: #4DB2FF;
+    background-color: var(--nav-hover);
 }
 .NavLink__active {
-    background-color: #4DB2FF;
+    background-color: var(--nav-hover);
 }
 
 @media screen and (min-width: 850px) {
@@ -46,5 +55,14 @@
     }
     .LogoWrapper.Mobile {
         display: none;
+    }
+    .LogoWrapper img {
+        max-width: 200px;
+    }
+    .Nav {
+        display: block;
+    }
+    .NavWrapper {
+        display: block;
     }
 }

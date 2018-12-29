@@ -3,10 +3,10 @@ import styles from "./styles.module.css";
 import Nav from "./Nav";
 import NavLink from "./NavLink";
 import navLinks from "../../config/menu";
-import cn from "classnames";
 import MenuButton from "../MenuButton";
+import Logo from "./Logo";
 
-export default () => {
+export default ({ onClick, status }) => {
   const nav = navLinks.map(link => (
     <NavLink key={link.path} to={link.path}>
       {link.text}
@@ -15,14 +15,10 @@ export default () => {
 
   return (
     <header className={styles.Header}>
-      <div className={cn(styles.LogoWrapper, styles.Desktop)}>
-        <img src="/images/logo.png" alt="site logo" />
-      </div>
+      <Logo screenType="Desktop" />
       <div className={styles.NavWrapper}>
-        <MenuButton />
-        <div className={cn(styles.LogoWrapper, styles.Mobile)}>
-          <img src="/images/logo.png" alt="site logo" />
-        </div>
+        <MenuButton status={status} onClick={onClick} />
+        <Logo screenType="Mobile" />
         <Nav>{nav}</Nav>
       </div>
     </header>

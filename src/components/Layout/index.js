@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Header from "../Header";
-import MenuButton from "../MenuButton";
 import Overlay from "../Overlay";
 import SideMenu from "../SideMenu";
 import Main from "../Main";
@@ -40,8 +39,7 @@ class Layout extends Component {
 
     return (
       <React.Fragment>
-        <Header />
-        <MenuButton status={status} onClick={this.showMenu} />
+        <Header status={status} onClick={this.showMenu} />
         <Overlay status={status} onClick={this.showMenu} />
         <SideMenu status={status} />
         <Main>{children}</Main>
