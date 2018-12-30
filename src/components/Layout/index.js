@@ -3,7 +3,7 @@ import Header from "../Header";
 import Overlay from "../Overlay";
 import SideMenu from "../SideMenu";
 import Main from "../Main";
-
+import Container from "../Container";
 
 class Layout extends Component {
   state = {
@@ -33,6 +33,10 @@ class Layout extends Component {
     this.setState({ showSideMenu: !this.state.showSideMenu });
   };
 
+  closeMenu = () => {
+    this.setState({ showSideMenu: false });
+  };
+
   render() {
     const status = this.state.showSideMenu ? "open" : "closed";
     const { children } = this.props;
@@ -40,9 +44,11 @@ class Layout extends Component {
     return (
       <React.Fragment>
         <Header status={status} onClick={this.showMenu} />
-        <Overlay status={status} onClick={this.showMenu} />
+        <Overlay status={status} onClick={this.closeMenu} />
         <SideMenu status={status} />
-        <Main>{children}</Main>
+        <Main>
+          <Container>{children}</Container>
+        </Main>
       </React.Fragment>
     );
   }

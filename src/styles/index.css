@@ -4,6 +4,7 @@
   --desktop-lower: 851px;
   --main-color: #2FA5FF;
   --nav-hover: #4DB2FF;
+  --main-text: #333333;
 }
 
 body {
@@ -11,6 +12,9 @@ body {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.5;
+}
+body.open {
+  position: fixed;
 }
 
 

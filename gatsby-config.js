@@ -13,6 +13,13 @@ module.exports = {
         name: "articles"
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/categories`,
+        name: "categories"
+      }
+    },
     "gatsby-plugin-sharp",
     {
       resolve: "gatsby-transformer-remark",

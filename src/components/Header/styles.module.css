@@ -26,6 +26,7 @@
     align-items: center;
 }
 .Nav {
+    width: 90%;
     max-width: 1000px;
     margin: auto;
     display: none;
