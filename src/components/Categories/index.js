@@ -1,19 +1,49 @@
 import React from "react";
 import Category from "./Category";
 import styles from "./styles.module.css";
+import { StaticQuery, graphql } from "gatsby";
 
-const Categories = () => {
-  return (
-    <>
-      <h2>Kategorije</h2>
-      <div className={styles.CategoryWrapper}>
-        <Category path="/puske" naziv="Puške" image_name="speargun.jpeg" />
-        <Category path="/odijela" naziv="Odijela" image_name="wetsuit.jpeg" />
-        <Category path="/peraje" naziv="Peraje" image_name="peraje.jpg" />
-        <Category path="/maske" naziv="Maske" image_name="maske.jpg" />
-      </div>
-    </>
-  );
-};
+const Categories = () => (
+  <StaticQuery
+    query={graphql`
+      query allcategoriesQuery {
+        allMarkdownRemark(
+          filter: { fileAbsolutePath: { regex: "/(categories)/.*.md$/" } }
+        ) {
+          edges {
+            node {
+              frontmatter {
+                slug
+                naziv
+                image_name
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={({ allMarkdownRemark: { edges: categories } }) => (
+      <>
+        <h2>Kategorije</h2>
+        <div className={styles.CategoryWrapper}>
+          {categories.map(
+            ({
+              node: {
+                frontmatter: { slug, naziv, image_name }
+              }
+            }) => (
+              <Category
+                path={`/${slug}`}
+                naziv={naziv}
+                image_name={image_name}
+                key={slug}
+              />
+            )
+          )}
+        </div>
+      </>
+    )}
+  />
+);
 
 export default Categories;
