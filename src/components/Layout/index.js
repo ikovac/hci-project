@@ -4,6 +4,7 @@ import Overlay from "../Overlay";
 import SideMenu from "../SideMenu";
 import Main from "../Main";
 import Container from "../Container";
+import Footer from "../Footer";
 
 class Layout extends Component {
   state = {
@@ -49,6 +50,7 @@ class Layout extends Component {
         <Main>
           <Container>{children}</Container>
         </Main>
+        <Footer />
       </React.Fragment>
     );
   }

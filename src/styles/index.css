@@ -15,6 +15,7 @@ body {
 }
 body.open {
   position: fixed;
+  width: 100%;
 }
 
 

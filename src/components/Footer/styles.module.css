@@ -1,0 +1,25 @@
+footer {
+    margin-top: 20px;
+}
+
+.FooterTop {
+    background-color: #e6e6e6;
+}
+
+.FooterSectionWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.FooterBottomContainer {
+    background-color: black;
+    color: #BBBBBB;
+    text-align: center;
+    padding: 10px;
+}
+
+.FooterBottomContainer p {
+    font-size: 14px;
+    margin: 0;
+}

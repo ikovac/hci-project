@@ -1,0 +1,57 @@
+.SlideshowContainer {
+  position: relative;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.SlideshowContainer .IconLeft {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 35px;
+  padding: 10px;
+  left: 0px;
+  cursor: pointer;
+  background: #00000082;
+}
+
+.SlideshowContainer .IconRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 35px;
+  padding: 10px;
+  right: 0px;
+  cursor: pointer;
+  background: #00000082;
+}
+
+.SlideshowContainer .IconLeft:hover,
+.SlideshowContainer .IconRight:hover {
+  background: black;
+}
+
+.SlideshowContainer .WelcomeText {
+  position: absolute;
+  top: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+.SlideshowContainer .WelcomeText h2 {
+  color: white;
+  text-shadow: 2px 2px 20px black;
+  max-width: 60%;
+  margin: auto;
+}
+
+@media screen and (min-width: 850px) {
+  .SlideshowContainer {
+    margin-top: 0px;
+    max-width: 80%;
+  }
+}
