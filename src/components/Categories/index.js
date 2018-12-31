@@ -3,7 +3,7 @@ import Category from "./Category";
 import styles from "./styles.module.css";
 import { StaticQuery, graphql } from "gatsby";
 
-const Categories = () => (
+const Categories = ({location}) => (
   <StaticQuery
     query={graphql`
       query allcategoriesQuery {
@@ -37,6 +37,7 @@ const Categories = () => (
                 naziv={naziv}
                 image_name={image_name}
                 key={slug}
+                location={location}
               />
             )
           )}

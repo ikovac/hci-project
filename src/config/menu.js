@@ -5,6 +5,6 @@ export default [
     },
     {
       text: "Proizvodi",
-      path: "/second-page"
+      path: "/proizvodi"
     }
   ];

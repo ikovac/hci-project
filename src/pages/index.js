@@ -5,10 +5,10 @@ import Categories from "../components/Categories";
 import Slideshow from "../components/Slideshow";
 import WhyUs from "../components/WhyUs";
 
-export default () => (
+export default ({location}) => (
   <>
     <Slideshow />
     <WhyUs />
-    <Categories />
+    <Categories location={location} />
   </>
 );
