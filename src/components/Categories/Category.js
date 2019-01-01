@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./styles.module.css";
 import { Link } from "gatsby";
 
-const Category = ({ naziv, path, image_name, location }) => {
+const Category = ({ naziv, path, html, location }) => {
   return (
     <div className={styles.CategoryCard}>
       <Link
@@ -12,9 +12,10 @@ const Category = ({ naziv, path, image_name, location }) => {
         }}
       >
         <h3>{naziv}</h3>
-        <div className={styles.ImageWrapper}>
-          <img src={"/images/" + image_name} alt={naziv} />
-        </div>
+        <div
+          className={styles.ImageWrapper}
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
       </Link>
     </div>
   );

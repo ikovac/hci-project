@@ -1,5 +1,8 @@
 ---
 slug: peraje
 naziv: "Peraje"
-image_name: "peraje.jpg"
 ---
+
+<figure class="figure">
+    <img src="./images/peraje.jpg" alt="Peraje"/>
+</figure>

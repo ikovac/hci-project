@@ -1,5 +1,8 @@
 ---
 slug: maske
 naziv: "Maske"
-image_name: "maske.jpg"
 ---
+
+<figure class="figure">
+    <img src="./images/maske.jpg" alt="Maska"/>
+</figure>

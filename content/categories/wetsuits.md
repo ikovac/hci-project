@@ -1,5 +1,8 @@
 ---
 slug: odijela
 naziv: "Odijela"
-image_name: "wetsuit.jpeg"
 ---
+
+<figure class="figure">
+    <img src="./images/wetsuit.jpeg" alt="wetsuit"/>
+</figure>

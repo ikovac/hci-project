@@ -12,10 +12,10 @@ const Categories = ({location}) => (
         ) {
           edges {
             node {
+              html
               frontmatter {
                 slug
                 naziv
-                image_name
               }
             }
           }
@@ -29,13 +29,14 @@ const Categories = ({location}) => (
           {categories.map(
             ({
               node: {
-                frontmatter: { slug, naziv, image_name }
+                html,
+                frontmatter: { slug, naziv }
               }
             }) => (
               <Category
                 path={`/${slug}`}
                 naziv={naziv}
-                image_name={image_name}
+                html={html}
                 key={slug}
                 location={location}
               />

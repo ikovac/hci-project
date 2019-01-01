@@ -48,6 +48,19 @@
   margin: auto;
 }
 
+.SlideshowContainer img {
+  width: 100%;
+}
+
+.SlideshowImage {
+  display: block;
+  position: unset !important;
+}
+
+.SlideshowImage picture img{
+  position: unset !important;
+}
+
 @media screen and (min-width: 850px) {
   .SlideshowContainer {
     margin-top: 0px;

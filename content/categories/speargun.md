@@ -1,5 +1,8 @@
 ---
 slug: puske
 naziv: "Puške"
-image_name: "speargun.jpeg"
 ---
+
+<figure class="figure">
+    <img src="./images/speargun.jpeg" alt="speargun"/>
+</figure>
