@@ -1,7 +1,7 @@
 ---
 title: "Carbonia 115 x6"
 slug: carbonia
-category: "spearguns"
+category: "puske"
 price: 1115
 ---
 

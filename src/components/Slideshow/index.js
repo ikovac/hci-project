@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import styles from "./styles.module.css";
 import cn from "classnames";
 import { graphql, StaticQuery } from "gatsby";
-import Img from "gatsby-image";
 
 class Slideshow extends Component {
   constructor(props) {
@@ -63,11 +62,10 @@ class Slideshow extends Component {
                 className={cn("fas fa-angle-left", styles.IconLeft)}
                 onClick={() => this.nextClick(images.length)}
               />
-              <Img
-                resolutions={
-                  images[this.state.activeImage].node.childImageSharp.original
+              <img
+                src={
+                  images[this.state.activeImage].node.childImageSharp.original.src
                 }
-                className={styles.SlideshowImage}
               />
               <i
                 className={cn("fas fa-angle-right", styles.IconRight)}

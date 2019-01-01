@@ -1,6 +1,7 @@
 ---
 slug: puske
 naziv: "Puške"
+category: "puske"
 ---
 
 <figure class="figure">

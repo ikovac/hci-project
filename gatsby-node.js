@@ -45,6 +45,7 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             frontmatter {
               slug
+              category
             }
           }
         }
@@ -56,13 +57,13 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      const { slug } = node.frontmatter;
+      const { slug, category } = node.frontmatter;
       createPage({
         path: `/${slug}`,
         component: categoriesTemplate,
         context: {
           // additional data can be passed via context
-          slug
+          category
         }
       });
     });

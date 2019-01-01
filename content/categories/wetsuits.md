@@ -1,6 +1,7 @@
 ---
 slug: odijela
 naziv: "Odijela"
+category: "odijela"
 ---
 
 <figure class="figure">

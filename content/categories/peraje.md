@@ -1,6 +1,7 @@
 ---
 slug: peraje
 naziv: "Peraje"
+category: "peraje"
 ---
 
 <figure class="figure">

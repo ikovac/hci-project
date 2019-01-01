@@ -1,7 +1,7 @@
 ---
 title: "Bleutec acid 105"
 slug: bleutec-acid
-category: "spearguns"
+category: "puske"
 price: 560
 ---
 
