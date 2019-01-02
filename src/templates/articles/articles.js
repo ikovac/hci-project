@@ -7,6 +7,7 @@ export default ({ data }) => {
   return (
     <>
       <h1>{article.frontmatter.title}</h1>
+      <h3>Cijena: {article.frontmatter.price}kn</h3>
       <section
         className={styles.Post}
         dangerouslySetInnerHTML={{ __html: article.html }}
@@ -22,6 +23,7 @@ export const query = graphql`
       frontmatter {
         slug
         title
+        price
       }
     }
   }

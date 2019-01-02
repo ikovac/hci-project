@@ -1,25 +1,32 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import styles from "./styles.module.css";
+import PropTypes from "prop-types";
+import ArticleList from "../../components/ArticleList";
 
-export default ({ data, location }) => {
-  // const { allMarkdownRemark: {edges: articles} } = data;
-  console.log(data);
+const CategoryPage = ({ data, location }) => {
+  let articles = data.allMarkdownRemark ? data.allMarkdownRemark.edges : [];
   return (
     <>
       <Link to={location.state ? location.state.prev : "/"}>
         <i className="fas fa-arrow-left" />
       </Link>
-      {/* <h1>{category.frontmatter.naziv}</h1> */}
-      {/* <section
-        className={styles.Post}
-        dangerouslySetInnerHTML={{ __html: category.html }}
-      /> */}
-      <h3>Sidebar</h3>
-      {/* {articles && articles.map(article => <div key={article.node.frontmatter.slug}>{article.node.frontmatter.slug}</div>)} */}
+      <h1>{data.markdownRemark.frontmatter.naziv}</h1>
+
+      <ArticleList articles={articles} />
     </>
   );
 };
+
+CategoryPage.propTypes = {
+  data: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.object.isRequired,
+    markdownRemark: PropTypes.object.isRequired
+  })
+};
+
+export default CategoryPage;
 
 export const query = graphql`
   query allAcrticlesForCategoryQuery($category: String) {
@@ -31,11 +38,19 @@ export const query = graphql`
     ) {
       edges {
         node {
+          htmlAst
           frontmatter {
             slug
+            title
+            price
             category
           }
         }
+      }
+    }
+    markdownRemark(frontmatter: { slug: { eq: $category } }) {
+      frontmatter {
+        naziv
       }
     }
   }
