@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import renderHtmlToReact from "../RenderHtmlToReact";
+import Article from "../Article";
 
 class ArticleList extends Component {
   constructor(props) {
@@ -7,12 +7,15 @@ class ArticleList extends Component {
     this.state = {
       articles: this.props.articles
     };
-    console.log(this.props.articles);
   }
 
   render() {
     const { articles } = this.state;
-    return <section>{renderHtmlToReact(articles[0].node.htmlAst.children[0])}</section>;
+    return (
+      <>
+        {articles && articles.map(article => <Article key={article.node.id} node={article.node} />)}
+      </>
+    );
   }
 }
 

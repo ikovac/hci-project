@@ -66,6 +66,7 @@ class Slideshow extends Component {
                 src={
                   images[this.state.activeImage].node.childImageSharp.original.src
                 }
+                alt="slideshow"
               />
               <i
                 className={cn("fas fa-angle-right", styles.IconRight)}

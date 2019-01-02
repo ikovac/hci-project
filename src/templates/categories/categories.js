@@ -8,18 +8,25 @@ const CategoryPage = ({ data, location }) => {
   let articles = data.allMarkdownRemark ? data.allMarkdownRemark.edges : [];
   return (
     <>
-      <Link to={location.state ? location.state.prev : "/"}>
-        <i className="fas fa-arrow-left" />
-      </Link>
-      <h1>{data.markdownRemark.frontmatter.naziv}</h1>
+      <section className={styles.CategoryHeader}>
+        <Link to={location.state ? location.state.prev : "/"}>
+          <i className="fas fa-arrow-left" />
+        </Link>
+        <h1>
+          {data.markdownRemark.frontmatter.naziv}
+        </h1>
+      </section>
 
-      <ArticleList articles={articles} />
+      <section className={styles.MainWrapper}>
+        <div className={styles.ArticleList}>
+          <ArticleList articles={articles} />
+        </div>
+      </section>
     </>
   );
 };
 
 CategoryPage.propTypes = {
-  data: PropTypes.object.isRequired,
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.object.isRequired,
     markdownRemark: PropTypes.object.isRequired
@@ -38,7 +45,9 @@ export const query = graphql`
     ) {
       edges {
         node {
+          id
           htmlAst
+          excerpt(pruneLength: 200)
           frontmatter {
             slug
             title

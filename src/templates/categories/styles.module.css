@@ -1,0 +1,25 @@
+.CategoryHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.CategoryHeader a {
+  text-decoration: none;
+  color: black;
+  margin-right: 20px;
+  font-size: 20px;
+}
+.CategoryHeader a:hover {
+    color: var(--main-color);
+}
+.CategoryHeader h1 {
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 850px) {
+  .ArticleList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+}
