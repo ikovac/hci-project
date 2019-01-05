@@ -14,6 +14,7 @@ const Article = node => {
         </Link>
       </h3>
       <section className={styles.Picture}>{figure && renderHtmlToReact(figure)}</section>
+      <h3>Cijena: {frontmatter.price}</h3>
       <p>{excerpt}</p>
     </div>
   );

@@ -10,16 +10,22 @@
   font-size: 20px;
 }
 .CategoryHeader a:hover {
-    color: var(--main-color);
+  color: var(--main-color);
 }
 .CategoryHeader h1 {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 850px) {
+  .MainWrapper {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
   .ArticleList {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
+    grid-column: 2 / span 2;
   }
 }

@@ -2,6 +2,7 @@
 title: "Bleutec Oceanborn 110"
 slug: bleutec-oceanborn
 category: "puske"
+proizvodac: "bleutec"
 price: 10000
 ---
 

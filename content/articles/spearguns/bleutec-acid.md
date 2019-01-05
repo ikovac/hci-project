@@ -2,6 +2,7 @@
 title: "Bleutec Acid 105"
 slug: bleutec-acid
 category: "puske"
+proizvodac: "bleutec"
 price: 4300
 ---
 

@@ -2,6 +2,7 @@
 title: "Carbonia 115 x6"
 slug: carbonia
 category: "puske"
+proizvodac: "carbonia"
 price: 12000
 ---
 
