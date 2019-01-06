@@ -2,8 +2,8 @@
   --mobile: 450px;
   --tablet-upper: 850px;
   --desktop-lower: 851px;
-  --main-color: #2FA5FF;
-  --nav-hover: #4DB2FF;
+  --main-color: #2fa5ff;
+  --nav-hover: #4db2ff;
   --main-text: #333333;
 }
 
@@ -18,10 +18,10 @@ body.open {
   width: 100%;
 }
 
-
 h1 {
-    font-size: 2em;
-    margin: 0.67em 0; }
+  font-size: 2em;
+  margin: 0.67em 0;
+}
 
 p {
   margin-bottom: 1rem;
@@ -158,4 +158,18 @@ h6,
 
 img {
   max-width: 100%;
+}
+
+#search-icon-mobile {
+  margin-left: auto;
+}
+
+@media screen and (min-width: 850px) {
+  #search-icon-mobile {
+    display: none;
+  }
+  #search-icon {
+    margin-left: auto;
+    margin-right: 0;
+  }
 }

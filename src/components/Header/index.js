@@ -7,11 +7,12 @@ import MenuButton from "../MenuButton";
 import Logo from "./Logo";
 
 export default ({ onClick, status }) => {
-  const nav = navLinks.map(link => (
+  let nav = navLinks.map(link => (
     <NavLink key={link.path} to={link.path}>
       {link.text}
     </NavLink>
   ));
+  nav.push(<NavLink id="search-icon" key="search" to="/search"><i className="fas fa-search"></i></NavLink>);
 
   return (
     <header className={styles.Header}>
@@ -20,6 +21,7 @@ export default ({ onClick, status }) => {
         <MenuButton status={status} onClick={onClick} />
         <Logo screenType="Mobile" />
         <Nav>{nav}</Nav>
+        <NavLink id="search-icon-mobile" key="search" to="/search"><i className="fas fa-search"></i></NavLink>
       </div>
     </header>
   );

@@ -1,73 +1,74 @@
 .Header {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .LogoWrapper {
-    text-align: center;
+  text-align: center;
 }
 .LogoWrapper.Desktop {
-    display: none;
+  display: none;
 }
 .LogoWrapper.Mobile {
-    display: block;
-    margin-left: 10px;
+  display: block;
+  margin-left: 10px;
 }
 .LogoWrapper.Mobile a {
-    display: flex;
-    align-items: center;
-    max-height: 50px;
+  display: flex;
+  align-items: center;
+  max-height: 50px;
 }
 
 .LogoWrapper img {
-    width: 100%;
-    max-width: 120px;
-    height: auto;
-    cursor: pointer;
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  cursor: pointer;
 }
 
 .NavWrapper {
-    background-color: var(--main-color);
-    display: flex;
-    align-items: center;
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
 }
 .Nav {
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    display: none;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  display: none;
 }
 .NavLink {
-    display: inline-block;
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    margin-right: 10px;   
+  display: inline-block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 10px;
 }
 .NavLink:hover {
-    background-color: var(--nav-hover);
+  background-color: var(--nav-hover);
 }
 .NavLink__active {
-    background-color: var(--nav-hover);
+  background-color: var(--nav-hover);
 }
 
-@media screen and (min-width: 850px) {
-    .Header {
-        padding-top: 20px;
-    }
 
-    .LogoWrapper.Desktop {
-        display: block;
-    }
-    .LogoWrapper.Mobile {
-        display: none;
-    }
-    .LogoWrapper img {
-        max-width: 200px;
-    }
-    .Nav {
-        display: block;
-    }
-    .NavWrapper {
-        display: block;
-    }
+@media screen and (min-width: 850px) {
+  .Header {
+    padding-top: 20px;
+  }
+
+  .LogoWrapper.Desktop {
+    display: block;
+  }
+  .LogoWrapper.Mobile {
+    display: none;
+  }
+  .LogoWrapper img {
+    max-width: 200px;
+  }
+  .Nav {
+    display: flex;
+  }
+  .NavWrapper {
+    display: block;
+  }
 }
