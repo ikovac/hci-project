@@ -164,6 +164,21 @@ img {
   margin-left: auto;
 }
 
+.search-input {
+  margin-bottom: 10px;
+  position: relative;
+}
+.search-input input {
+  padding: 5px 10px;
+  padding-left: 30px;
+}
+.search-input i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px;
+}
+
 @media screen and (min-width: 850px) {
   #search-icon-mobile {
     display: none;
@@ -171,5 +186,10 @@ img {
   #search-icon {
     margin-left: auto;
     margin-right: 0;
+  }
+  .article-wrapper {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }

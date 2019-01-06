@@ -1,4 +1,9 @@
 module.exports = {
+  siteMetadata: {
+    title: "Dive In",
+    description:
+      "Dobrodošli na Dive In webshop"
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-layout`,

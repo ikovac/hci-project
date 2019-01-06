@@ -33,6 +33,14 @@ class CategoryPage extends Component {
           } = article;
           return proizvodacValues.includes(frontmatter.proizvodac);
         });
+      } else if(proizvodacValues.length === 0) {
+        let cijenaNo = Number(cijena);
+        filterArticles = this.state.articles.filter(article => {
+          const {
+            node: { frontmatter }
+          } = article;
+          return frontmatter.price <= cijenaNo;
+        });
       } else {
         let cijenaNo = Number(cijena);
         filterArticles = this.state.articles.filter(article => {

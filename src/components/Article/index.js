@@ -3,8 +3,8 @@ import styles from "./styles.module.css";
 import renderHtmlToReact from "../RenderHtmlToReact";
 import { Link } from "gatsby";
 
-const Article = node => {
-  const { htmlAst, frontmatter, excerpt } = node.node;
+const Article = ({node}) => {
+  const { htmlAst, frontmatter, excerpt } = node;
   let figure = htmlAst.children.find(element => element.tagName === "figure");
   return (
     <div className={styles.Article}>
@@ -14,7 +14,7 @@ const Article = node => {
         </Link>
       </h3>
       <section className={styles.Picture}>{figure && renderHtmlToReact(figure)}</section>
-      <h3>Cijena: {frontmatter.price}</h3>
+      <h4>Cijena: {frontmatter.price} kn</h4>
       <p>{excerpt}</p>
     </div>
   );
