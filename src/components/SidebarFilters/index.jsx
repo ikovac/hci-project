@@ -11,13 +11,13 @@ class SidebarFilters extends Component {
   constructor(props) {
     super(props);
     this.proizvodacCheckboxes = new Set();
-    this.state = {price: ''}
+    this.state = { price: "" };
   }
 
   handleFormSubmit = event => {
     event.preventDefault();
 
-    const {onFormSubmit} = this.props;
+    const { onFormSubmit } = this.props;
     onFormSubmit(this.proizvodacCheckboxes, this.state.price);
   };
 
@@ -29,25 +29,34 @@ class SidebarFilters extends Component {
     }
   };
 
-  onPriceChange = (event) => {
+  onPriceChange = event => {
     this.setState({ price: event.target.value });
-  }
+  };
 
   render() {
     return (
       <>
         <form onSubmit={this.handleFormSubmit}>
-          {Proizvodac.map(item => (
-            <Checkbox
-              item={item}
-              key={item.value}
-              handleCheckboxChange={this.handleCheckboxChange}
-            />
-          ))}
           <div>
-            <label htmlFor="price">Cijena do </label>
-            <input id="price" type="number" min="0" value={this.state.price} onChange={this.onPriceChange}/>
-            <label> kn</label>
+            <label>Proizvođač</label>
+            {Proizvodac.map(item => (
+              <Checkbox
+                item={item}
+                key={item.value}
+                handleCheckboxChange={this.handleCheckboxChange}
+              />
+            ))}
+          </div>
+          <div>
+            <label htmlFor="price">Cijena </label>
+            <input
+              id="price"
+              type="number"
+              min="0"
+              value={this.state.price}
+              onChange={this.onPriceChange}
+              placeholder="kn"
+            />
           </div>
 
           <button type="submit">Primjeni</button>

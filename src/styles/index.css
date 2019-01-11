@@ -179,6 +179,12 @@ img {
   left: 5px;
 }
 
+#price {
+  max-width: 60px;
+  padding: 10px;
+  margin-left: 10px;
+}
+
 @media screen and (min-width: 850px) {
   #search-icon-mobile {
     display: none;

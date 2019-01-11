@@ -16,6 +16,71 @@
   margin-bottom: 0;
 }
 
+/* SIDEBAR SECTION */
+.Sidebar form {
+  color: white;
+  width: 80%;
+  margin: auto;
+  margin-top: 55px;
+}
+.Sidebar form > div{
+  margin-bottom: 10px;
+}
+.Sidebar form > div > label {
+  font-weight: bold;
+}
+.Sidebar form button {
+  border: 0;
+  padding: 10px;
+  color: white;
+  background-color: #2fa5ff;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.Sidebar form button:active {
+  transform: scale(0.95);
+}
+.Sidebar.open {
+  display: block;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 29;
+  background-color: #0e0e0ee0;
+}
+.Sidebar.closed {
+  display: none;
+}
+
+.FiltersModalBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  border-radius: 100%;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  padding: 0px;
+  z-index: 30;
+  box-shadow: 0px 0px 9px 0px black;
+  border: 0px;
+  outline: 0;
+  cursor: pointer;
+  background-color: var(--main-color);
+  color: white;
+}
+
+.FiltersModalBtn:active {
+  transform: scale(0.9);
+}
+
 @media screen and (min-width: 850px) {
   .MainWrapper {
     display: grid;
@@ -27,5 +92,22 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
     grid-column: 2 / span 2;
+  }
+
+  /* SIDEBAR SECTION */
+  .Sidebar,
+  .Sidebar.closed,
+  .Sidebar.open {
+    display: block;
+  }
+
+  .Sidebar form {
+    color: unset;
+    width: unset;
+    margin: unset;
+    margin-top: unset;
+  }
+  .FiltersModalBtn {
+    display: none;
   }
 }

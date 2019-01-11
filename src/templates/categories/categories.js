@@ -4,6 +4,7 @@ import styles from "./styles.module.css";
 import PropTypes from "prop-types";
 import ArticleList from "../../components/ArticleList";
 import SidebarFilters from "../../components/SidebarFilters";
+import cn from "classnames";
 
 class CategoryPage extends Component {
   constructor(props) {
@@ -14,7 +15,8 @@ class CategoryPage extends Component {
         : [],
       filterArticles: this.props.data.allMarkdownRemark
         ? this.props.data.allMarkdownRemark.edges
-        : []
+        : [],
+      sidebar: false
     };
   }
   onFormSubmit = (proizvodac, cijena) => {
@@ -33,7 +35,7 @@ class CategoryPage extends Component {
           } = article;
           return proizvodacValues.includes(frontmatter.proizvodac);
         });
-      } else if(proizvodacValues.length === 0) {
+      } else if (proizvodacValues.length === 0) {
         let cijenaNo = Number(cijena);
         filterArticles = this.state.articles.filter(article => {
           const {
@@ -53,12 +55,21 @@ class CategoryPage extends Component {
           );
         });
       }
-      this.setState({ filterArticles: filterArticles });
+      this.setState({ filterArticles: filterArticles, sidebar: false });
     }
   };
+
+  onSidebarModalClick = () => {
+    this.setState({ sidebar: !this.state.sidebar });
+  }
+
   render() {
     const { location } = this.props;
-    const { filterArticles: articles } = this.state;
+    const { filterArticles: articles, sidebar } = this.state;
+    const sidebarClasses = cn(
+      styles.Sidebar,
+      sidebar ? styles.open : styles.closed
+    );
     return (
       <>
         <section className={styles.CategoryHeader}>
@@ -68,9 +79,12 @@ class CategoryPage extends Component {
           <h1>{this.props.data.markdownRemark.frontmatter.naziv}</h1>
         </section>
         <section className={styles.MainWrapper}>
-          <div className={styles.Sidebar}>
+          <div className={sidebarClasses}>
             <SidebarFilters onFormSubmit={this.onFormSubmit} />
           </div>
+          <button className={styles.FiltersModalBtn} onClick={this.onSidebarModalClick}>
+            <i className="fas fa-sliders-h" />
+          </button>
           <div className={styles.ArticleList}>
             <ArticleList articles={articles} />
           </div>
