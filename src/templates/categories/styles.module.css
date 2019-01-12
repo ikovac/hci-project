@@ -22,8 +22,10 @@
   width: 80%;
   margin: auto;
   margin-top: 55px;
+  border: 1px solid #cccccc;
+  padding: 20px;
 }
-.Sidebar form > div{
+.Sidebar form > div {
   margin-bottom: 10px;
 }
 .Sidebar form > div > label {

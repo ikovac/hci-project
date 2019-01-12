@@ -8,7 +8,6 @@ footer {
 
 .FooterSectionWrapper {
   display: block;
-  text-align: center;
 }
 .FooterSection:nth-child(3) {
     padding-bottom: 10px;

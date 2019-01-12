@@ -13,6 +13,10 @@ body {
   font-weight: normal;
   line-height: 1.5;
 }
+
+main {
+  min-height: 60vh;
+}
 body.open {
   position: fixed;
   width: 100%;
@@ -184,6 +188,48 @@ img {
   padding: 10px;
   margin-left: 10px;
 }
+
+/* Login form styles*/
+.login-form-container {
+  max-width: 300px;
+  margin: auto;
+}
+
+.login-form-container .error-div {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+.login-form-container .error-div p {
+  margin: 0;
+}
+#login-form button {
+  border: 0;
+  padding: 10px;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+}
+#login-form button p {
+  margin: 0;
+}
+#login-form button.red {
+  background-color: red;
+}
+#login-form button.green {
+  background-color: green;
+}
+
+#login-form input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+/* End of Login form styles */
 
 @media screen and (min-width: 850px) {
   #search-icon-mobile {

@@ -12,6 +12,9 @@ export default ({ onClick, status }) => {
       {link.text}
     </NavLink>
   ));
+  if(localStorage.getItem('user')) {
+    nav.push(<NavLink key="admin" to="/admin-page">Admin</NavLink>);
+  }
   nav.push(<NavLink id="search-icon" key="search" to="/search"><i className="fas fa-search"></i></NavLink>);
 
   return (
