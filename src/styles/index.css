@@ -231,6 +231,63 @@ img {
 }
 /* End of Login form styles */
 
+/* Admin page */
+.logout-btn {
+  /* float: right; */
+  background: red;
+  color: white;
+  border: 0;
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  /* box-shadow: 1px 1px 6px 0px black; */
+}
+
+.add-new-product-container {
+  max-width: 350px;
+  margin: auto;
+}
+
+.add-new-product-container form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.add-new-product-container form textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.add-new-product-container form button {
+  padding: 10px;
+  background-color: #2fa5ff;
+  color: white;
+  border: 0px;
+  border-radius: 3px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.add-new-product-container section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.add-new-product-container section i {
+  color: green;
+  font-size: 20px;
+}
+
+.add-new-product-container section h3 {
+  margin: 0;
+  margin-left: 10px;
+}
+/* End of admin page */
+
 @media screen and (min-width: 850px) {
   #search-icon-mobile {
     display: none;

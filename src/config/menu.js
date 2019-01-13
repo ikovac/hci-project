@@ -6,5 +6,9 @@ export default [
     {
       text: "Proizvodi",
       path: "/proizvodi"
+    },
+    {
+      text: "O nama",
+      path: "/o-nama"
     }
   ];
